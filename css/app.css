@@ -22,6 +22,7 @@ html {
 a {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  text-decoration: none;
 }
 
 img {
@@ -593,10 +594,10 @@ img {
   background: #23232b;
   width: 3rem;
   height: 3rem;
-  display: block;
-  border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -617,20 +618,22 @@ img {
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8rem;
+  width: 18rem;
   min-height: 100vh;
   background: #1a1b20;
   padding: 2rem 1rem;
   border-right: 1px solid #232323;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .sidebar .brand {
   width: 3rem;
   height: 3rem;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
 }
@@ -660,26 +663,50 @@ img {
 }
 
 .sidebar__link {
-  width: 3rem;
-  height: 3rem;
-  display: block;
   border-radius: 1rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #fff;
+  padding: 0 1rem;
 }
 
 .sidebar__link--active, .sidebar__link:hover {
   background: #0d80e5;
   -webkit-box-shadow: 0 0 8px #0d80e5;
           box-shadow: 0 0 8px #0d80e5;
+}
+
+.sidebar__link-text {
+  margin-left: 0.5rem;
+}
+
+.sidebar--collapsed {
+  width: 8rem;
+}
+
+.sidebar--collapsed .sidebar__link {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar--collapsed .sidebar__link-text {
+  display: none;
+}
+
+.footer {
+  font-size: 0.75rem;
+  color: #9fa0a3;
 }
 
 .btn {
@@ -757,10 +784,21 @@ img {
 }
 
 body {
-  background: #1a1b20;
+  background: linear-gradient(45deg, #72798b, #474955);
 }
 
 main {
-  margin-left: 8rem;
   padding: 2rem;
+  width: 100%;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+  border-radius: 2rem;
+  background: #1a1b20;
+  -webkit-box-shadow: 0 10px 50px #1a1b20;
+          box-shadow: 0 10px 50px #1a1b20;
 }
