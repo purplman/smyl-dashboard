@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -498,8 +506,63 @@ img {
   margin-left: auto !important;
 }
 
+.form__box {
+  position: relative;
+}
+
+.form__box:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__box--icon .form__el {
+  padding-left: 3rem;
+}
+
+.form__el {
+  background: #23232b;
+  border: none;
+  outline: none;
+  height: 3rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  display: block;
+  color: #9fa0a3;
+  font-size: 1rem;
+  line-height: 3rem;
+  width: 100%;
+}
+
+.form__el::-webkit-input-placeholder {
+  color: #78797d;
+}
+
+.form__el:-ms-input-placeholder {
+  color: #78797d;
+}
+
+.form__el::-ms-input-placeholder {
+  color: #78797d;
+}
+
+.form__el::placeholder {
+  color: #78797d;
+}
+
+.form__el--search {
+  min-width: 20rem;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9fa0a3;
+  font-size: 1rem;
+}
+
 .header {
-  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,6 +593,7 @@ img {
   background: #23232b;
   width: 3rem;
   height: 3rem;
+  display: block;
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,8 +608,8 @@ img {
 
 .header__list a:hover {
   background: #0d80e5;
-  -webkit-box-shadow: 0 0 10px #0d80e5;
-          box-shadow: 0 0 10px #0d80e5;
+  -webkit-box-shadow: 0 0 8px #0d80e5;
+          box-shadow: 0 0 8px #0d80e5;
 }
 
 .header .user {
@@ -559,8 +623,89 @@ img {
   width: 8rem;
   min-height: 100vh;
   background: #1a1b20;
-  padding: 1rem;
-  border-right: 1px solid #333;
+  padding: 2rem 1rem;
+  border-right: 1px solid #232323;
+}
+
+.sidebar .brand {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar__menu {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar__menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar__menu li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar__link {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.sidebar__link--active, .sidebar__link:hover {
+  background: #0d80e5;
+  -webkit-box-shadow: 0 0 8px #0d80e5;
+          box-shadow: 0 0 8px #0d80e5;
+}
+
+.btn {
+  border-radius: 1rem;
+  margin-top: 3rem;
+  display: block;
+  border: none;
+  height: 3rem;
+  max-width: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.btn--p {
+  background: #1a1b20;
+  color: #fff;
+}
+
+.btn--p:hover {
+  background: #0d80e5;
+  -webkit-box-shadow: 0 0 8px #0d80e5;
+          box-shadow: 0 0 8px #0d80e5;
 }
 
 /* width */
@@ -585,10 +730,37 @@ img {
   background: #000;
 }
 
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.auth__form {
+  width: 500px;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: #1a1b20;
+  background: linear-gradient(-30deg, #23232b, #1a1b20 60%);
+}
+
+.auth__title, .auth__text {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
 body {
   background: #1a1b20;
 }
 
 main {
   margin-left: 8rem;
+  padding: 2rem;
 }
