@@ -651,18 +651,19 @@ img {
           justify-content: center;
 }
 
-.sidebar__menu ul {
+.sidebar__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.sidebar__menu li {
+.sidebar__list li {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  position: relative;
 }
 
-.sidebar__link {
+.sidebar__link, .sidebar__toggle {
   border-radius: 1rem;
   height: 3rem;
   display: -webkit-box;
@@ -675,14 +676,22 @@ img {
   padding: 0 1rem;
 }
 
-.sidebar__link--active, .sidebar__link:hover {
+.sidebar__link--active, .sidebar__link:hover, .sidebar__toggle--active, .sidebar__toggle:hover {
   background: #0d80e5;
   -webkit-box-shadow: 0 0 8px #0d80e5;
           box-shadow: 0 0 8px #0d80e5;
 }
 
-.sidebar__link-text {
+.sidebar__link-text, .sidebar__toggle-text {
   margin-left: 0.5rem;
+}
+
+.sidebar__toggle--active {
+  width: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sidebar--collapsed {
@@ -702,6 +711,50 @@ img {
 
 .sidebar--collapsed .sidebar__link-text {
   display: none;
+}
+
+.sidebar--collapsed .sidebar__dropdown {
+  display: none;
+}
+
+.sidebar__dropdown {
+  background: #23232b;
+  display: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.sidebar__dropdown--active {
+  display: block;
+}
+
+.sidebar__dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar__dropdown li {
+  margin: 0;
+}
+
+.sidebar__dropdown a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.sidebar__dropdown a:hover {
+  background: #18181d;
 }
 
 .footer {
@@ -747,14 +800,15 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f1f1f1;
+  background: #1a1b20;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #000;
+  background: #0d80e5;
 }
 
 .auth {
