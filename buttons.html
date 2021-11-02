@@ -19,9 +19,40 @@
 
         <div id="content" class="content">
           <div class="card">
-            <div class="card__header">Buttons</div>
+            <div class="card__header mb-5">Buttons</div>
             <div class="card__body">
-              <a href="" class="btn btn--p"> Primary button </a>
+              <div class="row">
+                <div class="col-2">
+                  <label class="mb-3 f-sm color-w d-block"
+                    >Standard Button</label
+                  >
+                  <a href="" class="w-100 btn btn--p"> Primary button </a>
+                </div>
+                <div class="col-2">
+                  <label class="mb-3 f-sm color-w d-block"
+                    >Button with icon</label
+                  >
+                  <a href="" class="w-100 btn mt-0 btn--p btn--icon">
+                    <ion-icon
+                      class="btn__icon"
+                      name="alert-circle-outline"
+                    ></ion-icon>
+                    Primary button
+                  </a>
+                </div>
+                <div class="col-2">
+                  <label class="mb-3 f-sm color-w d-block"
+                    >Button with rotating icon</label
+                  >
+                  <a href="" class="w-100 btn btn--p btn--icon">
+                    <ion-icon
+                      class="btn__icon btn__icon--animated"
+                      name="sync-outline"
+                    ></ion-icon>
+                    Primary button
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
