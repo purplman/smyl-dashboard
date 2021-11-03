@@ -24,4 +24,10 @@ $(() => {
   $(document).on("mouseenter", ".sidebar", () => {
     $(".sidebar__link--active").siblings(".sidebar__dropdown").show();
   });
+
+  $(".dropdown__toggle").on("click", function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass("dropdown--active");
+    $(this).siblings(".dropdown__menu").slideToggle();
+  });
 });

@@ -18,21 +18,35 @@
         </header>
 
         <div id="content" class="content">
-          <div class="card">
-            <div class="card__header mb-5">Buttons</div>
-            <div class="card__body">
+          <div class="wrapper">
+            <div class="wrapper__title mb-5">Buttons</div>
+            <div class="wrapper__body">
               <div class="row">
-                <div class="col-2">
+                <div class="col-2 mb-5 mb-3">
                   <label class="mb-3 f-sm color-w d-block"
                     >Standard Button</label
                   >
-                  <a href="" class="w-100 btn btn--p"> Primary button </a>
+                  <a href="" class="btn btn--p">Button </a>
                 </div>
-                <div class="col-2">
+                <div class="col-2 mb-5 mb-3">
+                  <label class="mb-3 f-sm color-w d-block"
+                    >Rectangle Button</label
+                  >
+                  <a href="" class="btn btn--p btn--rectangle">
+                    Primary button
+                  </a>
+                </div>
+                <div class="col-2 mb-5 mb-3">
+                  <label class="mb-3 f-sm color-w d-block"
+                    >Outlined Button</label
+                  >
+                  <a href="" class="btn btn--outline"> Outlined button </a>
+                </div>
+                <div class="col-2 mb-5 mb-3">
                   <label class="mb-3 f-sm color-w d-block"
                     >Button with icon</label
                   >
-                  <a href="" class="w-100 btn mt-0 btn--p btn--icon">
+                  <a href="" class="btn mt-0 btn--p btn--icon">
                     <ion-icon
                       class="btn__icon"
                       name="alert-circle-outline"
@@ -40,11 +54,21 @@
                     Primary button
                   </a>
                 </div>
-                <div class="col-2">
+                <div class="col-2 mb-5 mb-3">
                   <label class="mb-3 f-sm color-w d-block"
                     >Button with rotating icon</label
                   >
-                  <a href="" class="w-100 btn btn--p btn--icon">
+                  <a href="" class="btn btn--p btn--icon">
+                    <ion-icon
+                      class="btn__icon btn__icon--animated"
+                      name="sync-outline"
+                    ></ion-icon>
+                    Primary button
+                  </a>
+                </div>
+                <div class="col-2 mb-5 mb-3">
+                  <label class="mb-3 f-sm color-w d-block">Small button</label>
+                  <a href="" class="btn btn--p btn--icon btn--sm">
                     <ion-icon
                       class="btn__icon btn__icon--animated"
                       name="sync-outline"
