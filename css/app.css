@@ -25,31 +25,39 @@
 }
 
 .w-25 {
-  width: 25%;
+  width: 25% !important;
 }
 
 .w-33 {
-  width: 33%;
+  width: 33% !important;
 }
 
 .w-40 {
-  width: 40%;
+  width: 40% !important;
 }
 
 .w-50 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .w-60 {
-  width: 60%;
+  width: 60% !important;
 }
 
 .w-75 {
-  width: 75%;
+  width: 75% !important;
 }
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+.h-100 {
+  height: 100% !important;
 }
 
 .d-block {
@@ -1067,6 +1075,7 @@ ion-icon {
   padding-right: 1.5rem;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  color: #fff !important;
 }
 
 .btn--sm {
@@ -1083,7 +1092,6 @@ ion-icon {
 
 .btn--p {
   background: #1a1b20;
-  color: #fff !important;
 }
 
 .btn--p:hover {
@@ -1094,13 +1102,70 @@ ion-icon {
 
 .btn--s {
   background: #23232b;
-  color: #fff !important;
 }
 
 .btn--s:hover {
   background: #0d80e5;
   -webkit-box-shadow: 0 0 8px #0d80e5;
           box-shadow: 0 0 8px #0d80e5;
+}
+
+.btn--a {
+  background: #0d80e5;
+}
+
+.btn--a:hover {
+  background: #0d80e5;
+  -webkit-box-shadow: 0 0 8px #0d80e5;
+          box-shadow: 0 0 8px #0d80e5;
+}
+
+.btn--l {
+  background: #2ecc71;
+}
+
+.btn--l:hover {
+  background: #29b765;
+  -webkit-box-shadow: 0 0 8px #2ecc71;
+          box-shadow: 0 0 8px #2ecc71;
+}
+
+.btn--r {
+  background: #c0392b;
+}
+
+.btn--r:hover {
+  background: #ab3326;
+  -webkit-box-shadow: 0 0 8px #c0392b;
+          box-shadow: 0 0 8px #c0392b;
+}
+
+.btn--pr {
+  background: #6c5ce7;
+}
+
+.btn--pr:hover {
+  background: #5846e4;
+  -webkit-box-shadow: 0 0 8px #6c5ce7;
+          box-shadow: 0 0 8px #6c5ce7;
+}
+
+.btn--hover-r:hover {
+  background: #c0392b;
+  -webkit-box-shadow: 0 0 8px #c0392b;
+          box-shadow: 0 0 8px #c0392b;
+}
+
+.btn--hover-l:hover {
+  background: #2ecc71;
+  -webkit-box-shadow: 0 0 8px #2ecc71;
+          box-shadow: 0 0 8px #2ecc71;
+}
+
+.btn--hover-p:hover {
+  background: #1a1b20;
+  -webkit-box-shadow: 0 0 8px #1a1b20;
+          box-shadow: 0 0 8px #1a1b20;
 }
 
 .btn--rectangle {
@@ -1126,6 +1191,18 @@ ion-icon {
 .btn__icon--animated {
   -webkit-animation: spin linear 1s infinite;
           animation: spin linear 1s infinite;
+}
+
+.btn__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn__group .btn {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: auto;
 }
 
 /* width */
@@ -1278,10 +1355,39 @@ ion-icon {
   width: 15rem;
 }
 
-.dropdown--active .dropdown__toggle {
-  background: #0d80e5;
-  -webkit-box-shadow: 0 0 8px #0d80e5;
-          box-shadow: 0 0 8px #0d80e5;
+.dropdown__header {
+  position: relative;
+}
+
+.dropdown__header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/2/2021/10/Windows-11-Bloom-Screensaver-Dark-scaled.jpg);
+  background-size: cover;
+}
+
+.dropdown__header-content {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px) saturate(240%) contrast(100%) brightness(140%);
+          backdrop-filter: blur(10px) saturate(240%) contrast(100%) brightness(140%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  padding: 2rem 1rem;
 }
 
 .dropdown__body, .dropdown__footer {
@@ -1295,13 +1401,28 @@ ion-icon {
   padding-right: 1rem;
 }
 
+.dropdown__footer .btn {
+  height: auto;
+  padding: 0.5rem 2rem;
+}
+
 .dropdown__menu {
   width: 15rem;
-  display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 0;
   left: 0;
   background: #23232b;
+  border: 1px solid #1a1b20;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.dropdown__menu--active {
+  top: calc(100% + 8px);
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown ul {
@@ -1315,12 +1436,14 @@ ion-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #f2f2f2;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 14px;
 }
 
 .dropdown__link:hover {
@@ -1336,6 +1459,18 @@ ion-icon {
   font-weight: 600;
   padding: 1rem;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dropdown--lg .dropdown__menu {
+  width: 25rem;
+}
+
+.dropdown--active .dropdown__toggle {
+  background: #0d80e5;
+  -webkit-box-shadow: 0 0 8px #0d80e5;
+          box-shadow: 0 0 8px #0d80e5;
 }
 
 .auth {

@@ -26,8 +26,24 @@ $(() => {
   });
 
   $(".dropdown__toggle").on("click", function (e) {
+    let $dropdown = $(this).parent();
+    let $menu = $(this).siblings(".dropdown__menu");
+
+    // Remove active indicators from other dropdowns
+    $(".dropdown").not($dropdown).removeClass("dropdown--active");
+    $(".dropdown__menu").not($menu).removeClass("dropdown__menu--active");
+
+    // Toggle dropdown state
+    $dropdown.toggleClass("dropdown--active");
+    $menu.toggleClass("dropdown__menu--active");
     e.preventDefault();
-    $(this).parent().toggleClass("dropdown--active");
-    $(this).siblings(".dropdown__menu").slideToggle();
+  });
+
+  $(document).on("click", (e) => {
+    var $dropdown = $(".dropdown");
+    if (!$dropdown.is(e.target) && !$dropdown.has(e.target).length) {
+      $(".dropdown__menu").removeClass("dropdown__menu--active");
+      $(".dropdown").removeClass("dropdown--active");
+    }
   });
 });
