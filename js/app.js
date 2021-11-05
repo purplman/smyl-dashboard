@@ -46,4 +46,14 @@ $(() => {
       $(".dropdown").removeClass("dropdown--active");
     }
   });
+
+  $(document).on("click", ".theme__toggler", (e) => {
+    e.preventDefault();
+    let data = $("html").data("theme");
+    console.log(data);
+
+    data === "dark"
+      ? $("html").data("theme", "light")
+      : $("html").data("theme", "dark");
+  });
 });
